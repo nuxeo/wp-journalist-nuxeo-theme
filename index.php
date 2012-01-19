@@ -7,7 +7,7 @@
 <p class="comments"><a href="<?php comments_link(); ?>"><?php comments_number('without comments','with one comment','with % comments'); ?></a></p>
 
 <div class="main">
-	<?php the_content('Read the rest of this entry &raquo;'); ?>
+	<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
 </div>
 
 <div class="meta group">

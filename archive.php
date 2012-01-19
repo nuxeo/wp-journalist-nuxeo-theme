@@ -5,19 +5,19 @@
 
 <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 <?php /* If this is a category archive */ if (is_category()) { ?>
-<h2 class="archive">Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h2>
+<h1 class="archive">Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h1>
 <?php /* If this is a tag */ } elseif (is_tag()) { ?>
-<h2 class="archive">Archive for the &#8216;<?php single_tag_title(); ?>&#8217; tag</h2>
+<h1 class="archive">Archive for the &#8216;<?php single_tag_title(); ?>&#8217; tag</h1>
 <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-<h2 class="archive">Archive for <?php the_time('F jS, Y'); ?></h2>
+<h1 class="archive">Archive for <?php the_time('F jS, Y'); ?></h1>
 <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-<h2 class="archive">Archive for <?php the_time('F, Y'); ?></h2>
+<h1 class="archive">Archive for <?php the_time('F, Y'); ?></h1>
 <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-<h2 class="archive">Archive for <?php the_time('Y'); ?></h2>
+<h1 class="archive">Archive for <?php the_time('Y'); ?></h1>
 <?php /* If this is an author archive */ } elseif (is_author()) { ?>
-<h2 class="archive">Author Archive</h2>
+<h1 class="archive">Author Archive</h1>
 <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-<h2 class="archive">Blog Archives</h2>
+<h1 class="archive">Blog Archives</h1>
 <?php } ?>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -26,7 +26,7 @@
 <p class="comments"><a href="<?php comments_link(); ?>"><?php comments_number('without comments','with one comment','with % comments'); ?></a></p>
 
 <div class="main">
-	<?php the_content('Read the rest of this entry &raquo;'); ?>
+	<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
 </div>
 
 <div class="meta group">
