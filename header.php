@@ -13,18 +13,19 @@
 <?php wp_head(); ?>
 
 <!-- DFP begin -->
-
-<script type='text/javascript'>
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-(function() { var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node); })();
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
 </script>
-
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.defineSlot('/3111496/Nuxeo-Blogs-Article-Footer', [800, 40], 'div-gpt-ad-1327077181238-0').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); });
+GS_googleAddAdSenseService("ca-pub-1284681875767465");
+GS_googleEnableAllServices();
 </script>
-
-<!-- DFP start -->
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-1284681875767465", "Nuxeo-Blogs-Article-Footer");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- DFP end -->
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
