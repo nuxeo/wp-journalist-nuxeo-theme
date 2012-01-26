@@ -11,6 +11,21 @@
 <link rel="shortcut icon" type="image/x-png" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_head(); ?>
+
+<!-- DFP begin -->
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() { var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node); })();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.defineSlot('/3111496/Nuxeo-Blogs-Article-Footer', [800, 40], 'div-gpt-ad-1327077181238-0').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); });
+</script>
+
+<!-- DFP start -->
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-81135-4']);

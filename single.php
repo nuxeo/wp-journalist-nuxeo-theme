@@ -21,6 +21,13 @@
 </div>
 </div>
 
+<!-- Nuxeo-Blogs-Article-Footer -->
+<div id='div-gpt-ad-1327077181238-0' style='width:800px; height:40px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327077181238-0'); });
+</script>
+</div>
+
 <div class="navigation group">
     <div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
     <div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
