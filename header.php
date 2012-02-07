@@ -20,7 +20,7 @@ GS_googleAddAdSenseService("ca-pub-1284681875767465");
 GS_googleEnableAllServices();
 </script>
 <script type='text/javascript'>
-GA_googleAddSlot("ca-pub-1284681875767465", "Nuxeo-Blogs-Article-Footer");
+GA_googleAddSlot("ca-pub-1284681875767465", "Blog-Article-Footer");
 </script>
 <script type='text/javascript'>
 GA_googleFetchAds();

@@ -21,9 +21,9 @@
 </div>
 </div>
 
-<!-- Nuxeo-Blogs-Article-Footer -->
+<!-- Blog-Article-Footer -->
 <script type='text/javascript'>
-GA_googleFillSlot("Nuxeo-Blogs-Article-Footer");
+GA_googleFillSlot("Blog-Article-Footer");
 </script>
 
 <div class="navigation group">
