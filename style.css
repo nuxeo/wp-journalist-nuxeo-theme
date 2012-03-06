@@ -47,7 +47,7 @@ a:hover, #content h2 a:hover, .comments a:hover {
 #container #site-title {
   font-size:28px;
   font-weight: normal;
-  margin:0.7em 0 0 0;
+  margin:0.5em 0 0 0;
   padding-bottom: 0.15em;
   width:650px;
 }
@@ -57,18 +57,15 @@ a:hover, #content h2 a:hover, .comments a:hover {
 }
 
 #container #site-title a:hover {
-  color:black;
-  border-radius: 0;
-  border-bottom: 4px solid #333;
-  text-decoration: none;
+
 }
 
 #bubble {
   background-image: none;
-  background-color: #FFDD0B;
+  background-color: #e7e7e7;
   position: relative;
   display:inline-block;
-  padding:0.5em 1em;
+  padding:0.5em 0.75em;
   margin:0;
   margin-bottom: 1em;
   top:0;
@@ -81,6 +78,20 @@ a:hover, #content h2 a:hover, .comments a:hover {
     font-size: 12px;
     height: auto;
     padding: 0;
+    padding-left: 22px;
+  background: transparent url(images/user-silhouette.png) left 1px no-repeat;    
+}
+
+#bubble p a {
+  font-weight: bold;
+}
+
+#bubble p span {
+  display: inline-block;
+  margin:0 0.3em;
+  font-weight: bold;
+  color:#ccc;
+  font-size: 120%;
 }
 
 #search-box {
@@ -88,12 +99,12 @@ a:hover, #content h2 a:hover, .comments a:hover {
 }
 
 #searchform {
-  margin-top:5px;
+  margin-top:42px;
 }
 
 #searchform #s {
- padding:0.5em;
- width:144px;
+ padding:0.6em;
+ width:140px;
 }
 
 #searchform #s:hover {

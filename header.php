@@ -5,7 +5,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo('charset'); ?>" />
 <meta name="description" content="<?php bloginfo('description'); ?>" />
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
-<link href="http://www.nuxeo.com/var/storage/community/community_common.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="shortcut icon" type="image/x-png" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />
@@ -25,6 +24,7 @@ GA_googleAddSlot("ca-pub-1284681875767465", "Blog-Article-Footer");
 <script type='text/javascript'>
 GA_googleFetchAds();
 </script>
+
 <!-- DFP end -->
 
 <script type="text/javascript">
@@ -39,29 +39,13 @@ GA_googleFetchAds();
   })();
 </script>
 
+<!-- Common header and footer -->
+<script type="text/javascript" src="http://www.nuxeo.com/extension/nuxeo_design/design/nuxeo/javascript/xnav_get.js" charset="utf-8"></script>
+
 <script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> <script>mktoMunchkin("498-JDO-611");</script>
 </head>
 
 <body>
-
-<div class="header">
-  <div class="logoHome">
-    <a href="http://blogs.nuxeo.com/" title="Home" rel="home"><img width="88" height="36" src="http://www.nuxeo.com/var/storage/community/nuxeo_logo.png" alt="Nuxeo"></a>
-  </div>
-
-  <div class="externalLinks">
-    <ul>
-      <li><a href="http://community.nuxeo.com/">Home</a></li>
-      <li><a href="https://answers.nuxeo.com/">Answers</a></li>
-      <li><a href="http://forum.nuxeo.com/">Forums</a></li>
-      <li><a href="http://doc.nuxeo.com/">Documentation</a></li>
-      <li class="active"><a href="http://blogs.nuxeo.com/">Blogs</a></li>
-    </ul>
-    <ul class="corp">
-      <li><a href="http://nuxeo.com/">Nuxeo.com</a></li>
-    </ul>
-  </div>
-</div>
 
 <div id="container" class="group">
   <div id="header-container">
@@ -74,7 +58,7 @@ GA_googleFetchAds();
       </form>
     </div>
     <?php if(is_home()) {?><h1<?php } else {?><h2<?php } ?> id="site-title">
-      <a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a>
+      <a href="http://blogs.nuxeo.com"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/nuxeo-blogs.png" alt="Nuxeo/Blogs" width="211" height="41" /></a>
     <?php if(is_home()) {?></h1><?php } else {?></h2><?php } ?>
-    <div id="bubble"><p><?php bloginfo('description'); ?></p></div> <!-- erase this line if you want to turn the bubble off -->
+    <div id="bubble"><p><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a><span>/</span></span><?php bloginfo('description'); ?></p></div> <!-- erase this line if you want to turn the bubble off -->
   </div>
