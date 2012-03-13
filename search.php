@@ -16,7 +16,7 @@
 
 <div class="meta group">
 <div class="signature">
-    <p>Written by <?php the_author() ?> <span class="edit"><?php edit_post_link('Edit'); ?></span></p>
+    <p>Written by  <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php the_author() ?> </a><span class="edit"><?php edit_post_link('Edit'); ?></span></p>
     <p><?php the_time('F jS, Y'); ?> <?php _e("at"); ?> <?php the_time('g:i a'); ?></p>
 </div>	
 <div class="tags">

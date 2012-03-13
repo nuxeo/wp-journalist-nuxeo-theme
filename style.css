@@ -205,6 +205,10 @@ table.default_table td {
  width:auto;
 }
 
+.author-link {
+ text-transform: capitalize;
+}
+
 /* Comments */
 
 .comment_text {
@@ -258,4 +262,90 @@ table.default_table td {
 
 .asset-image {
   float:right;
+}
+
+
+/* Author Info */
+#author-info {
+  font-size: 12px;
+  overflow: hidden;
+  margin: 0 0 0 0;
+  border-top:1px solid #bbbbbb;
+  padding:1em;
+  /* SVG fallback(Opera 11.10-, IE9) */
+background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2JhKDI0MywyNDMsMjQzLDEpOyIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYmEoMjU1LDI1NSwyNTUsMSk7IiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IGZpbGw9InVybCgjZ3JhZGllbnQpIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIiAvPjwvc3ZnPg==);
+
+/* Opera 11.10+ */
+background: -o-linear-gradient(top, rgba(243,243,243,1), rgba(255,255,255,1));
+
+/* Firefox 3.6+ */
+background: -moz-linear-gradient(top, rgba(243,243,243,1), rgba(255,255,255,1));
+
+/* Chrome 7+ & Safari 5.03+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(243,243,243,1)), color-stop(1, rgba(255,255,255,1)));
+
+/* IE5.5 - IE7 */
+filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FFF3F3F3,EndColorStr=#FFFFFFFF);
+
+/* IE8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FFF3F3F3,EndColorStr=#FFFFFFFF)";
+}
+
+.author-singular {
+  border-color: white !important;
+  margin-top:-30px !important;
+}
+
+#author-avatar {
+	float: left;
+	margin-right: -78px;
+}
+
+#author-avatar img {
+	background: #fff;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 2px #bbb;
+	-moz-box-shadow: 0 1px 2px #bbb;
+	box-shadow: 0 1px 2px #bbb;
+	padding: 3px;
+}
+
+#author-description {
+	float: left;
+	margin-left: 95px;
+}
+
+#author-description h2 {
+	color: #000;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 5px 0 10px;
+	text-transform: capitalize;
+}
+
+#author-info ul.social-links {
+  float:right;
+  margin-top: -32px;
+}
+
+#author-info ul.social-links li {
+  list-style-type: none;
+}
+
+#author-link a {
+  display: inline-block;
+  padding:0.5em 1em;
+  margin-top:0.75em;
+  background-color: #38a637;
+  color:white;
+  border-radius: 0.5em;
+}
+
+.read_more:after {
+  clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
 }
