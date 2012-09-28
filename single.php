@@ -3,7 +3,7 @@
 <div id="content" class="group">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<h1 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+<h1 style="background-color:white;" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 <p class="comments"><a href="<?php comments_link(); ?>"><?php comments_number('without comments','with one comment','with % comments'); ?></a></p>
 
 <div class="main">

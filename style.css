@@ -36,18 +36,30 @@ a:hover, #content h2 a:hover, .comments a:hover {
   border-bottom: 1px solid #ccc;
 }
 
-#container h1 {
+#content h1 {
  font-weight: bold;
  letter-spacing: -1px;
- padding: 0;
  margin: 0.5em 0;
  width: auto;
+ background-color: #FFDE00;
+ display: inline-block;
+ margin-left: -30px;
+ padding: 0.25em 0.75em;
+}
+
+#content h1 a:hover {
+  color:black;
+  border-bottom: 2px solid black;
+}
+
+h1#banner-header {
 }
 
 #container #site-title {
   font-size:28px;
   font-weight: normal;
   margin:0.5em 0 0 0;
+  padding-top: 0;
   padding-bottom: 0.15em;
   width:650px;
 }
@@ -67,6 +79,7 @@ a:hover, #content h2 a:hover, .comments a:hover {
   display:inline-block;
   padding:0.5em 0.75em;
   margin:0;
+  margin-top:-20px;
   margin-bottom: 1em;
   top:0;
   height:auto;
@@ -99,7 +112,7 @@ a:hover, #content h2 a:hover, .comments a:hover {
 }
 
 #searchform {
-  margin-top:42px;
+  margin-top:7px;
 }
 
 #searchform #s {
@@ -150,8 +163,7 @@ div.foot .Contact {
 }
 
 .main a:hover img {
-  border:1px solid #0066cc;
-  border-color: transparent transparent #0066cc transparent;
+  border:1px solid transparent;
 }
 
 .wp-caption a {
@@ -349,3 +361,131 @@ filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=
     height: 0;
     visibility: hidden;
 }
+
+
+/* May 2011 New homepage for the Nuxeo Blogs, Ring tool */
+
+
+.bloghome #content {
+ border-left: 1px solid #E9EEF4;
+ padding:10px;
+ width: 640px;
+}
+
+#first {
+  margin-top:-40px;
+  margin-bottom: 2em;
+  clear:both;
+}  
+
+.bloghome .alignright {
+  margin: 0.5em;
+  margin-right: 0;
+}
+
+.bloghome .summary p {
+  line-height: 18px;
+    margin: 0 0 15px;
+}
+
+.bloghome #content h2, .bloghome #content h3 {
+   background-color: #FFDE00;
+    display: inline-block;
+    margin-left: -30px;
+    padding: 0.25em 0.75em;
+  font-weight: normal;
+}
+
+.bloghome .spotlight {
+  margin-bottom: 1em;
+}
+
+.bloghome .spotlighted {
+  border-bottom: 1px solid #e7e7e7;
+    font-size: 14px;
+}
+
+.spotlight .title, .spotlight .summary {
+ padding-left: 20px;
+}
+
+.bloghome #content h3 {
+  background-color: transparent;
+  padding:0;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 0;
+  font-weight: bold;
+  display: block;
+  text-decoration: underline;
+}
+
+.bloghome .posts-list {
+  clear:both;
+  margin-bottom: 40px;
+}
+
+.bloghome .posts-list ul {
+  padding: 0;
+  margin: 0;
+  font-size: 11px;
+}
+
+.bloghome .posts-list ul li {
+  list-style: none none inside;
+  padding: 0.5em 0;
+  margin-left: 20px;
+  border-bottom:1px solid #e7e7e7;
+}
+
+.bloghome .posts-list ul li span {
+  color:#999;
+}
+
+.bloghome .title h3 a, .bloghome .title h3 a:visited, .bloghome .title h3 a:hover {
+ color:black;
+ text-decoration: underline;
+ }
+ 
+.bloghome .read-more {
+  text-align: right;
+  margin: 0.35em 0; 
+  margin-bottom: 1em;
+}
+
+.bloghome .read-more a {
+  background-color: #3670B9;
+  padding:0.5em 1em;
+  color:white;
+}
+
+.bloghome .date {
+  color:#999;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 1em;
+}
+
+#container #site-title {
+    padding-bottom: 18px;
+}
+
+/*
+.bloghome h2.module-header {
+  background-color: transparent;
+  padding:0;
+  margin-left: 0;
+}
+
+.bloghome h3 {
+  margin-top:1em;
+}
+
+.bloghome h4 {
+  font-weight:bold;
+}
+
+.posts-list h4 {
+  margin-top:1.5em;
+}
+
+ */

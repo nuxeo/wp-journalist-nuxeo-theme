@@ -1,7 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
+<?php if(is_front_page()) {?>
+<title>Nuxeo Blogs</title>
+<?php } else { ?>
 <title><?php wp_title(' '); ?><?php if(wp_title(' ', false)) { ?> at <?php } ?><?php bloginfo('name'); ?></title>
+<?php } ?>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo('charset'); ?>" />
 <meta name="description" content="<?php bloginfo('description'); ?>" />
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
@@ -57,8 +61,17 @@ GA_googleFetchAds();
         </div>
       </form>
     </div>
-    <?php if(is_home()) {?><h1<?php } else {?><h2<?php } ?> id="site-title">
-      <a href="http://blogs.nuxeo.com"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/nuxeo-blogs.png" alt="Nuxeo/Blogs" width="211" height="41" /></a>
-    <?php if(is_home()) {?></h1><?php } else {?></h2><?php } ?>
-    <div id="bubble"><p><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a><span>/</span></span><?php bloginfo('description'); ?></p></div> <!-- erase this line if you want to turn the bubble off -->
-  </div>
+    <?php if(is_front_page()) {?><h1<?php } else {?><h2<?php } ?> id="site-title">
+      <?php if (!is_front_page() ) {?><a href="<?php echo site_url(); ?>"><?php }?><img src="<?php echo get_stylesheet_directory_uri() ?>/images/nuxeo-blogs.png" alt="Nuxeo/Blogs" width="211" height="41" /><?php if (!is_front_page() ) {?></a><?php }?>
+    <?php if(is_front_page()) {?></h1><?php } else {?></h2><?php } ?>
+    
+    <?php if (is_single() ||  is_category() ) {?>
+<div id="bubble"><p><?php
+ $category = get_the_category(); 
+echo '<a href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a> / ';
+echo $category[0]->description;
+ ?> </p></div> 
+<?php } else if (!is_front_page()) { ?>
+<div id="bubble"><p>Industry Insight, Product & Development, Updates.</p></div> 
+<?php } ?>
+</div>
