@@ -24,13 +24,21 @@
 
 
   <div class="summary">
-<?php echo catch_that_image(); ?>
-<?php echo get_excerpt(450); ?>
+<?php
+if ( has_tag( 'comic' ) ) { ?>
+  <a href="<?php the_permalink() ?>"> <?php echo catch_that_image(true) ?></a>
+</div>
+
+<?php } else {
+  echo catch_that_image();
+  echo get_excerpt(450);
+?>
+
   </div>
   <div class="read-more"><a href="<?php the_permalink() ?>">Continue reading &raquo;</a></div>
-  <div style="clear:both;"></div>
+<?php } ?>
   
-  
+<div style="clear:both;"></div>
 
 <div class="posts-list">
   <h4>Other recent posts</h4>
