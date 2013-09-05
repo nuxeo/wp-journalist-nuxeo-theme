@@ -10,11 +10,20 @@
  
 <div id="content">
 
-<?php query_posts( array ( 'category_name' => 'industry-insight,updates', 'posts_per_page' => 4) );the_post();?>
+<?php query_posts( array ( 'tag' => 'comic', 'posts_per_page' => 1 ) );the_post();
+ $my_comic = catch_that_image(true);
+ $my_comic_link = get_permalink();
+ $my_comic_title = get_the_title();
+?>
+
+<?php wp_reset_query(); ?>
+
+
+
+<?php query_posts( array ( 'category_name' => 'industry-insight,updates', 'tag__not_in' =>  array('909'), 'posts_per_page' => 4) );the_post();?>
 
  <div class="spotlight" id="first">
   <h2>Spotlight</h2>
-
  <div class="date">
 <?php the_time('D j F Y'); ?>
   </div>
@@ -24,22 +33,18 @@
 
 
   <div class="summary">
-<?php
-if ( has_tag( 'comic' ) ) { ?>
-  <a href="<?php the_permalink() ?>"> <?php echo catch_that_image(true) ?></a>
-</div>
-
-<?php } else {
-  echo catch_that_image();
-  echo get_excerpt(450);
-?>
-
+<?php echo catch_that_image(); ?>
+<?php echo get_excerpt(450); ?>
   </div>
   <div class="read-more"><a href="<?php the_permalink() ?>">Continue reading &raquo;</a></div>
-<?php } ?>
-  
-<div style="clear:both;"></div>
+  <div style="clear:both;"></div>
 
+<div>
+<div class="title">
+  <h3 class="comic"><a href="<?php echo $my_comic_link ?>" rel="bookmark"><?php echo $my_comic_title ?></a></h3>
+</div>
+<a href="<?php echo $my_comic_link ?>" ><?php echo $my_comic ?></a>
+</div>
 <div class="posts-list">
   <h4>Other recent posts</h4>
   <ul>

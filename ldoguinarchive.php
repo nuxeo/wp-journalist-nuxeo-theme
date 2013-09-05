@@ -17,10 +17,10 @@
 </head>
 <body>
 <?php
-$categorizingTags = array('converter', 'templating');
+$categorizingTags = array('converter', 'tagging', 'encoding', 'templating', 'authentication', 'metadata', 'continous integration', 'deployment', 'WebEngine', 'unit test', 'content automation', 'UI customization', 'OpenSocial', 'hot-reload', 'document creation', 'preview', 'roadmap', 'wcm', 'Studio', 'versioning', 'vcs', 'geoloc', 'locale', 'configuration', 'OpenSocial', 'directory');
 ?>
 
-<h2>Nuxeo Blog Tutorials - Q&A Friday / Monday Dev Heaven</h2>
+<h2>Nuxeo Blog Tutorials</h2>
 <div class="table-wrap">
 <table class="confluenceTable tablesorter">
 <thead>
@@ -31,7 +31,7 @@ $categorizingTags = array('converter', 'templating');
   </tr>
 </thead>
 <tbody>
-<?php query_posts( array ( 'tag' => 'friday-qa,monday-dev-heaven', 'posts_per_page' => 100) );?>
+<?php query_posts( array ( 'tag' => 'beginner,intermediate,advanced', 'posts_per_page' => 100) );?>
  <?php while (have_posts()) : the_post(); ?>
 <tr>
 <?php
@@ -64,7 +64,18 @@ if ($tagName == 'beginner' ) {
   <td class="confluenceTd"><?php echo $difficulty ?></td>
   <td class="confluenceTd"><?php echo $tagToDisplay ?></td>
   <td class="confluenceTd"><h6><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h6>
-  <p><?php echo get_post_meta($post->ID, '_yoast_wpseo_metadesc', true); ?></p></td>
+<?php 
+  foreach(get_post_meta($post->ID, 'githubRepo', false) as $repo) {
+    echo '<span style="float: right; padding: 2px 2px 2px 2px;"><a href="'.$repo.'"><img src="'.get_stylesheet_directory_uri().'/images/blacktocat-32.png" /></a></span>';
+  }
+?>
+<?php 
+  foreach(get_post_meta($post->ID, 'gist', false) as $gist) {
+    echo '<span style="float: right; padding: 2px 2px 2px 2px;"><a href="'.$gist.'"><img src="'.get_stylesheet_directory_uri().'/images/blacktocat-32.png" /></a></span>';
+  }
+?>
+  <p><?php echo get_post_meta($post->ID, '_yoast_wpseo_metadesc', true); ?></p>
+</td>
 </tr>
 <?php endwhile; ?>
 </tbody>
