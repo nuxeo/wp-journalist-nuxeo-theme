@@ -37,11 +37,6 @@
   </div><!-- #entry-author-info -->
 <?php endif; ?>
 
-<!-- Blog-Article-Footer -->
-<script type='text/javascript'>
-GA_googleFillSlot("Blog-Article-Footer");
-</script>
-
 <div class="navigation group">
     <div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
     <div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
