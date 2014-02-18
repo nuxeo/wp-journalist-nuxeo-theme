@@ -17,7 +17,7 @@
 </head>
 <body>
 <?php
-$categorizingTags = array('converter', 'tagging', 'encoding', 'templating', 'authentication', 'metadata', 'continous integration', 'deployment', 'WebEngine', 'unit test', 'content automation', 'UI customization', 'OpenSocial', 'hot-reload', 'document creation', 'preview', 'roadmap', 'wcm', 'Studio', 'versioning', 'vcs', 'geoloc', 'locale', 'configuration', 'OpenSocial', 'directory');
+$tagsToFilter = array('beginner', 'intermediate', 'advanced','Monday Dev Heaven', 'Friday Q&amp;A');
 ?>
 
 <h2>Nuxeo Blog Tutorials</h2>
@@ -54,7 +54,7 @@ if ($tagName == 'beginner' ) {
 } 
 
 
-    if (in_array($tagName, $categorizingTags)) {
+    if ( ! in_array($tagName, $tagsToFilter)) {
       $tagLink = '<a href="'.get_tag_link($tagId).'">'.$tagName.'</a>';
       $tagToDisplay =  $tagToDisplay.' '.$tagLink;
     }
