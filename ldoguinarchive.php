@@ -20,7 +20,6 @@
 $tagsToFilter = array('beginner', 'intermediate', 'advanced','Monday Dev Heaven', 'Friday Q&amp;A');
 ?>
 
-<h2>Nuxeo Blog Tutorials</h2>
 <div class="table-wrap">
 <table class="confluenceTable tablesorter">
 <thead>
